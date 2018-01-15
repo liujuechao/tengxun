@@ -1,0 +1,177 @@
+@charset "UTF-8";
+body,ol,ul,h1,h2,h3,h4,h5,h6,p,th,td,dl,dd,form,fieldset,legend,input,textarea,select{margin:0;padding:0} 
+body{font:12px"微软雅黑","Arial Narrow",HELVETICA;background:#fff;-webkit-text-size-adjust:100%;} 
+a{color:#2d374b;text-decoration:none} 
+a:hover{color:#cd0200;text-decoration:underline} 
+em{font-style:normal} 
+li{list-style:none} 
+img{border:0;vertical-align:middle} 
+table{border-collapse:collapse;border-spacing:0} 
+p{word-wrap:break-word} 
+@num:37.5rem;
+// @font-face {font-family: "iconfont";
+//     src: url('../iconfont.ttf'); /* IE9*/
+
+//   }
+// .iconfont {
+// font-family:"iconfont" !important;
+// font-size:16px;
+// font-style:normal;
+// -webkit-font-smoothing: antialiased;
+// -moz-osx-font-smoothing: grayscale;
+// }
+
+// .icon-tengxunxinwen:before { content: "\e69e"; }
+// .icon{
+//     color: #cd0200;
+// font-family:"iconfont" !important;
+// font-size:16px;
+// font-style:normal;
+// -webkit-font-smoothing: antialiased;
+// -moz-osx-font-smoothing: grayscale;
+// }
+header{
+    width: 100vw;
+    height: 50/@num;
+    background: #277de2;
+    padding: 0px 10/@num;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    >img{
+        width: 25/@num;
+        height: 25/@num;
+    }
+}
+.banner{
+    width: 100vw;    
+    background: #edf5fa;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative  ;
+    >div{
+        width: 90/@num;
+        height: 50/@num;
+        border-bottom:2/@num solid #edf5fa;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 20/@num; 
+        cursor: pointer; 
+    }
+    >div:hover{
+        color: #277de2;
+        border-bottom:2/@num solid #277de2;
+        font-weight: 600;        
+    }
+}
+aside{
+    position: absolute;
+    top: 50/@num;
+    left: 0px;    
+    width: 100vw;  
+    // display: none; 
+    opacity: 0;
+}
+.div1{        
+    background: #edf5fa;
+    opacity: 1;
+    .st{
+        width: 100vw;
+        height: 193/@num;
+        img{
+            width: 100vw;
+            height: 193/@num;
+        }
+    }
+    .banner1{
+        margin-top: 10/@num;
+        background: #fff;
+        width: 100vw;
+        height: 130/@num;
+        padding: 8/@num 10/@num;
+        display: flex;
+        flex-direction: column;        
+        b{
+            color: #277de2;
+            font-size: 22/@num;
+        }
+        p{
+            font-size: 20/@num;
+        }
+    
+    }
+    .banner2{
+        width: 100vw;
+        height: 110/@num;
+        padding: 10/@num;
+        box-sizing: border-box;
+        background: #fff;
+        margin-top: 2/@num;
+        display: flex;
+        flex-direction: row;
+        .left{
+            width: 65%;
+            height: 100%;
+            p{
+                font-size: 18/@num;
+            }
+        }
+        .right{
+            width: 35%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            img{
+                width: 110/@num;
+                height: 75/@num;
+            }
+        }
+    }
+}
+.div2{      
+    background:#edf5fa;
+    section{
+        width: 100%;        
+        margin-top: 2/@num;
+        background: #fff;
+        padding:15/@num 10/@num;
+        box-sizing: border-box;
+        p{
+            font-size: 18/@num;
+        }
+        div{
+            display: flex;
+            margin-top: 10/@num;
+            justify-content: space-between;
+            align-items: center;
+            img{
+                width: 114/@num;
+                height: 75/@num;
+            }
+        }
+    }
+}
+.div3{
+    background:#c1d1db;
+    footer{
+        width: 100vw;
+        margin-top: 4/@num;
+        img{
+            width: 100vw;
+            height: 210/@num;
+        }
+        div{
+            width: 100vw;
+            background: #fff;
+            padding:5/@num 10/@num;
+            box-sizing: border-box;
+            p{
+                font-size: 18/@num;
+            }
+        }
+    }
+}

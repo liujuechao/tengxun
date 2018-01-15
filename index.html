@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/bootstrap.css" >
+    <link rel="stylesheet" href="dist/css/swiper.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="jquery/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="dist/vue.js"></script>  
+    <script src="dist/js/swiper.min.js"></script>
+    <title>News</title>
+    <script>
+		var pixelRatio = 1 / window.devicePixelRatio;   //还原设备的真实分辨率；
+		//devicePixelRatio设备的像素比；
+		  
+		document.write('<meta name="viewport" content="width=device-width,initial-scale='+pixelRatio+',minimum-scale='+pixelRatio+',maximum-scale='+pixelRatio+'" />');
+		var html=document.getElementsByTagName('html')[0];
+		var pageWidth=html.getBoundingClientRect().width;
+		html.style.fontSize=pageWidth/10+"px"; 
+	</script>
+</head>
+<body>
+    <!-- <i class="icon iconfont icon-tengxunxinwen"></i> -->
+    <header>
+        <img src="imgs/ljc0.png">
+    </header>
+    <div class="banner">
+        <div>要闻</div>
+        <div>推荐</div>
+        <div>视频</div>  
+        <aside class="div1">
+                
+                    <!-- Swiper -->
+            <div class="swiper-container st">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="imgs/ljc1.png"></div>
+                    <div class="swiper-slide"><img src="imgs/ljc2.png"></div>
+                    <div class="swiper-slide"><img src="imgs/ljc3.png"></div>
+                </div>
+                <div class="swiper-pagination"></div>
+                </div>
+                
+              
+                
+               
+            <div class="banner1">
+                <b>今日要闻</b><br>
+                <p>习近平总书记在十九届中央纪委二次全会上的重要讲话引发全世界关注</p>
+            </div>
+            <div class="banner2" v-for="val in arr" >
+                <div class="left">
+                    <p>{{val.a}}</p>
+                </div>
+                <div class="right">
+                    <img :src="val.img">
+                </div>
+            </div>
+          
+        </aside> 
+        <aside class="div2" >
+            <section v-for="val1 in arr1">
+                <p>{{val1.a}}</p>
+                <div>
+                    <img :src="val1.img1">
+                    <img :src="val1.img2">
+                    <img :src="val1.img3">
+                </div>
+            </section>
+        </aside>
+        <aside class="div3">
+            <footer v-for="val2 in arr2">
+                <img :src="val2.img">
+                <div><p>
+                    {{val2.a}}
+                </p></div>
+            </footer>
+        </aside>      
+        
+        
+    </div>
+    <script>
+        new Vue({
+            el:'.banner',
+            data:{
+                arr:[{ 'a':'青岛“6岁快递男孩”暂被安顿在福利院 过了生平第一个生日','img':'imgs/ljc4.png'},{'a':'文读懂张小龙演讲干货：微信的未来是要探索线下','img':'imgs/ljc5.png'}],
+                arr1:[
+                    {'a':'看了这3张照片，还不相信马苏是老司机，多半是瞎了！','img1':'imgs/ljc6.png','img2':'imgs/ljc7.png','img3':'imgs/ljc8.png'},
+                    {'a':'看了这3张照片，还不相信马苏是老司机，多半是瞎了！','img1':'imgs/ljc3.png','img2':'imgs/ljc4.png','img3':'imgs/ljc5.png'},
+                    {'a':'紧急叫停，特朗普震惊中俄，10艘航母出现，上千架战机集结，现多艘航母一部署到位！','img1':'imgs/ljc9.png','img2':'imgs/ljc10.png','img3':'imgs/ljc11.png'},
+                    {'a':'实拍：福建某服装厂内最漂亮的女工，网友：我想恋爱了','img1':'imgs/ljc12.png','img2':'imgs/ljc13.png','img3':'imgs/ljc14.png'},
+                    ],
+                arr2:[{'a':'谢广坤这也太好牌面了 开个会跟自己是老总一样','img':'imgs/ljc15.png'},{'a':'两只布偶猫见面就掐架 这也太温柔了吧','img':'imgs/ljc16.png'},{'a':'于莎莎相亲 看不惯帅气的男人','img':'imgs/ljc17.png'}]
+            }
+
+        })
+     
+        $(function(){
+            $('.banner>div').click(function(){
+                var index=$(this).index();
+                $('.banner aside').eq(index).css('opacity','1')
+                $('.banner aside').not($('.banner aside').eq(index)).css('opacity','0')
+            })
+        })
+    
+        var swiper = new Swiper('.swiper-container', {
+        pagination: {
+            el: '.swiper-pagination',
+            dynamicBullets: true,
+        },
+        });
+    </script>   
+</body>
+</html>
